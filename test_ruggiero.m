@@ -6,6 +6,12 @@
 % function test_exemplo_13
 % exemplo 13
 %
+% function test_exemplo_14
+% exemplo 14
+%
+% function test_exemplo_15
+% exemplo 15
+%
 
 function test_suite = test_ruggiero
 initTestSuite;

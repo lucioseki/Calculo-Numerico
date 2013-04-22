@@ -56,13 +56,14 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
         
         % erro relativo
         error = abs(xii - xi)/abs(xii);
-        xi = xii;
         
         % convergiu
         if error < tol
             x = xii;
             return;
         end
+        
+        xi = xii;
     end
     
     % não encontrou a raíz em max_iter iterações
