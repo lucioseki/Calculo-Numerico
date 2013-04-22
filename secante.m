@@ -1,8 +1,8 @@
-function [ vx, iter ] = secante( f, v_inic, tol, max_iter )
+function [ x, k ] = secante( f, v_inic, tol, max_k )
 %SECANTE Implementação do Método da Secante para aproximação dos zeros de uma
 %função diferenciável.
 %
-%   [ vx, iter] = SECANTE( f, v_inic, tol, max_iter )
+%   [ x, k] = SECANTE( f, v_inic, tol, mqx_k )
 %
 %   Parâmetros de entrada:
 %   ----------------------
@@ -15,29 +15,34 @@ function [ vx, iter ] = secante( f, v_inic, tol, max_iter )
 %   
 %   tol: tolerância de erro.
 %
-%   max_iter: quantidade máxima de iterações.
+%   max_k: quantidade máxima de iterações.
 %
 %   Valores de retorno:
 %   ----------------------
-%   vx: vetor de aproximações da raíz obtidas nas iter iterações.
-%       Seu valor inicial é [ v_inic(1), v_inic(2) ].
-%       Ao final da execução, terá iter + 2 valores.
+%   x: aproximação obtida ao final de k iterações.
+%       Seu valor inicial é v_inic(1).
 %
-%   iter: quantidade de iterações realizadas
-%       iter = max_iter + 1, quando o número máximo de iterações é atingida sem
+%   k: quantidade de iterações realizadas
+%       k = max_k + 1, quando o número máximo de iterações é atingida sem
 %       respeitar a tolerância tol.
 %
 %   Erro:
 %   ----------------------
 %
-%   Quando f(x) não for definida em alguma iteração, imprime o vx obtido
-%   até esta iteração e aborta.
+%   Quando f(x) não for definida em alguma iteração, aborta.
+
+    % x inicial = ponto inicial
+    xi = v_inic(1);
+    xii = v_inic(2);
     
-    % verifica quantidade de argumentos
-    ST = dbstack; % estrutura contendo a pilha de execução atual
-    if nargin ~= nargin(ST.name)
-        error('secante:argChk', 'Quantidade inválida de argumentos.\nDigite "help %s" para obter ajuda.', ST.name)
+    % vetor de saída = vetor de pontos iniciais
+    x = v_inic;
+    
+    % iterações
+    for k = 0:max_k
     end
     
+    % não encontrou a raíz em max_iter iterações
+    k = k + 1;
 end
 
