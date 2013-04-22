@@ -7,7 +7,6 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
 %   Parâmetros de entrada:
 %   ----------------------
 %   f: função cuja raíz será obtida.
-%      Deve possuir zero ou uma raíz.
 %   
 %   v_inic: vetor de pontos iniciais.
 %           No método de Newton, será considerado somente o primeiro elemento.
