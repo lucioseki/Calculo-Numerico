@@ -31,7 +31,7 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
 %   Quando f(x) não for definida em alguma iteração, aborta.
 
     % x inicial = ponto inicial
-    xi = v_inic(1);
+    x0 = v_inic(1);
 
     % ponto inicial é a raíz
     if abs(f(xi)) < tol
@@ -46,28 +46,28 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
     
     % iterações
     for k = 1:max_k
-        xii = xi - ( f(xi) / subs(flinha, x, xi) );
+        x1 = x0 - ( f(x0) / subs(flinha, x, x0) );
         
         % encontrou a raíz
-        if abs(f(xii)) < tol
-            x = xii;
+        if abs(f(x1)) < tol
+            x = x1;
             return
         end
         
         % erro relativo
-        error = abs(xii - xi)/abs(xii);
+        error = abs(x1 - x0)/abs(x1);
         
         % convergiu
         if error < tol
-            x = xii;
+            x = x1;
             return;
         end
         
-        xi = xii;
+        x0 = x1;
     end
     
     % não encontrou a raíz em max_iter iterações
-    x = xii;
+    x = x1;
     k = k + 1;
 end
 
