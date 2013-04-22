@@ -66,6 +66,7 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
     end
     
     % não encontrou a raíz em max_iter iterações
+    x = xii;
     k = k + 1;
 end
 
