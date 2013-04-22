@@ -25,4 +25,4 @@ function test_tolerancia_grande
 f = @(x) (x^2 + x - 6);
 
 [x, k] = newton(f, 1.5, 10, 10);
-assertEqual(x, 2.0625);
+assertEqual(k, 0);

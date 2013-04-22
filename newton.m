@@ -32,6 +32,13 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
 
     % x inicial = ponto inicial
     xi = v_inic(1);
+
+    % ponto inicial é a raíz
+    if abs(f(xi)) < tol
+        k = 0;
+        x = xi;
+        return
+    end
     
     % derivada de f(x)
     x = sym('x', 'real');
