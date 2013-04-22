@@ -2,7 +2,7 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
 %NEWTON Implementação do Método de Newton para aproximação dos zeros de uma
 %função diferenciável.
 %   
-%   [ vx, k] = NEWTON( f, v_inic, tol, max_k )
+%   [ x, k] = NEWTON( f, v_inic, tol, max_k )
 %
 %   Parâmetros de entrada:
 %   ----------------------
@@ -34,9 +34,9 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
     x0 = v_inic(1);
 
     % ponto inicial é a raíz
-    if abs(f(xi)) < tol
+    if abs(f(x0)) < tol
         k = 0;
-        x = xi;
+        x = x0;
         return
     end
     
