@@ -1,3 +1,6 @@
+% Lucio Mitsuru Seki            379883  lucioseki@gmail.com
+% Viviane Bonadia dos Santos    379972  vivianebonadia@gmail.com
+% 
 % testa o comportamento da função com diferentes valores de tolerância.
 %
 % function test_tolerancia_grande

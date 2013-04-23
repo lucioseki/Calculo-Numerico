@@ -1,4 +1,7 @@
 function [ x, k ] = newton( f, v_inic, tol, max_k )
+% Lucio Mitsuru Seki            379883  lucioseki@gmail.com
+% Viviane Bonadia dos Santos    379972  vivianebonadia@gmail.com
+% 
 %NEWTON Implementação do Método de Newton para aproximação dos zeros de uma
 %função diferenciável.
 %   
@@ -23,11 +26,7 @@ function [ x, k ] = newton( f, v_inic, tol, max_k )
 %   k: quantidade de iterações realizadas
 %      k = max_k + 1, quando o número máximo de iterações é atingida sem
 %      respeitar a tolerância tol.
-%
-%   Erro:
-%   ----------------------
-%
-%   Quando f(x) não for definida em alguma iteração, aborta.
+
 
     % x inicial = ponto inicial
     x0 = v_inic(1);

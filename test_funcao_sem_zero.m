@@ -1,3 +1,6 @@
+% Lucio Mitsuru Seki            379883  lucioseki@gmail.com
+% Viviane Bonadia dos Santos    379972  vivianebonadia@gmail.com
+% 
 % testa se iter == max_iter + 1, quando a funcao nao tem raiz
 %
 % function test_f_sempre_positivo

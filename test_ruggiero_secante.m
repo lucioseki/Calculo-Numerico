@@ -1,3 +1,6 @@
+% Lucio Mitsuru Seki            379883  lucioseki@gmail.com
+% Viviane Bonadia dos Santos    379972  vivianebonadia@gmail.com
+% 
 % conjunto de testes do método da Secante com exemplos do livro da Ruggiero
 %
 % function test_exemplo_12

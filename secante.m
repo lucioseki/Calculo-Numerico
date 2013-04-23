@@ -1,4 +1,7 @@
 function [ x, k ] = secante( f, v_inic, tol, max_k )
+% Lucio Mitsuru Seki            379883  lucioseki@gmail.com
+% Viviane Bonadia dos Santos    379972  vivianebonadia@gmail.com
+% 
 %SECANTE Implementação do Método da Secante para aproximação dos zeros de uma
 %função diferenciável.
 %
@@ -25,11 +28,6 @@ function [ x, k ] = secante( f, v_inic, tol, max_k )
 %      k = max_k + 1, quando o número máximo de iterações é atingida sem
 %      respeitar a tolerância tol.
 %
-%   Erro:
-%   ----------------------
-%
-%   Quando f(x) não for definida em alguma iteração, aborta.
-
     % x iniciais = pontos iniciais
     x0 = v_inic(1);
     x1 = v_inic(2);

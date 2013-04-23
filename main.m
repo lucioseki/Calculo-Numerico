@@ -1,3 +1,6 @@
+% Lucio Mitsuru Seki            379883  lucioseki@gmail.com
+% Viviane Bonadia dos Santos    379972  vivianebonadia@gmail.com
+% 
 % Função principal
 
 % Parâmetros de entrada
