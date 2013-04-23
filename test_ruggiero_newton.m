@@ -38,7 +38,7 @@ x0 = 0.5;
 tol = 10e-3;
 [x, k] = newton(f, x0, tol, 2);
 assertElementsAlmostEqual(x, 0.337606838, 'relative', 10e-8);
-assertEqual(k, 3);
+assertEqual(k, 2);
 
 function test_exemplo_15
 % Exemplo 15 de Ruggiero
@@ -46,4 +46,4 @@ f = @(x) (x^2 - 7);
 x0 = 2;
 [x, k] = newton(f, x0, 10e-7, 10);
 assertElementsAlmostEqual(x, 2.645751311, 'relative', 10e-9);
-assertEqual(k, 5);
+assertEqual(k, 4);
